@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="PharmaTrace - Pendeteksi Interaksi Obat & Herbal Berbasis AI. Teknologi farmasi pintar untuk layanan kesehatan yang lebih aman.">
+    <title>PharmaTrace | Deteksi Interaksi Obat & Herbal AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💊</text></svg>">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo" id="nav-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00E68A" />
+                                <stop offset="100%" style="stop-color:#00D4FF" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="16" cy="16" r="14" stroke="url(#logoGrad)" stroke-width="2.5" fill="none" />
+                        <path d="M10 16h12M16 10v12" stroke="url(#logoGrad)" stroke-width="2.5"
+                            stroke-linecap="round" />
+                        <circle cx="16" cy="16" r="4" fill="url(#logoGrad)" opacity="0.3" />
+                    </svg>
+                </div>
+                <span class="logo-text">Pharma<span class="logo-accent">Trace</span></span>
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="#home" class="nav-link active" data-section="home">Beranda</a>
+                <a href="#scanner" class="nav-link" data-section="scanner">Pemindai</a>
+                <a href="#database" class="nav-link" data-section="database">Basis Data</a>
+                <a href="#dashboard" class="nav-link" data-section="dashboard">Dasbor</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <canvas id="particles-canvas"></canvas>
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+        <div class="hero-glow hero-glow-3"></div>
+        <div class="hero-content">
+            <div class="hero-badge glass-card-sm">
+                <span class="badge-dot"></span>
+                Platform Berbasis AI
+            </div>
+            <h1 class="hero-title">
+                Pendeteksi Interaksi Obat &amp; Herbal
+                <span class="title-gradient">Berbasis AI</span>
+            </h1>
+            <p class="hero-subtitle">
+                Teknologi farmasi pintar untuk layanan kesehatan yang lebih aman.<br>
+                Deteksi interaksi antara obat modern dan obat herbal Indonesia secara instan.
+            </p>
+            <div class="hero-buttons">
+                <a href="#scanner" class="btn btn-primary btn-lg">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="M21 21l-4.35-4.35" />
+                    </svg>
+                    Mulai Analisis
+                </a>
+                <a href="#database" class="btn btn-glass btn-lg">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <ellipse cx="12" cy="5" rx="9" ry="3" />
+                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                    </svg>
+                    Jelajahi Basis Data
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-value">150+</span>
+                    <span class="hero-stat-label">Entri Obat</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-value">50+</span>
+                    <span class="hero-stat-label">Herbal Indonesia</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-value">99.2%</span>
+                    <span class="hero-stat-label">Akurasi AI</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-element capsule-1">💊</div>
+            <div class="floating-element capsule-2">🧬</div>
+            <div class="floating-element leaf-1">🌿</div>
+            <div class="floating-element leaf-2">🍃</div>
+            <div class="floating-element molecule-1">⚗️</div>
+            <div class="floating-element dna-1">🧪</div>
+            <div class="hero-orb orb-1"></div>
+            <div class="hero-orb orb-2"></div>
+            <div class="hero-orb orb-3"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section section-features">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-badge">Fitur Utama</span>
+                <h2 class="section-title">Didukung oleh AI Canggih</h2>
+                <p class="section-subtitle">Mesin AI mutakhir kami menganalisis interaksi obat-herbal dengan presisi
+                    dan memberikan wawasan yang dapat ditindaklanjuti untuk keputusan kesehatan yang lebih aman.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card glass-card" id="feature-scanner">
+                    <div class="feature-icon-wrap">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="11" cy="11" r="8" />
+                                <path d="M21 21l-4.35-4.35" />
+                                <path d="M8 11h6M11 8v6" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>Pemindai Pintar</h3>
+                    <p>Analisis interaksi berbasis AI antara obat modern dan obat tradisional/herbal Indonesia.
+                    </p>
+                </div>
+                <div class="feature-card glass-card" id="feature-risk">
+                    <div class="feature-icon-wrap">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path
+                                    d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>Penilaian Risiko</h3>
+                    <p>Klasifikasi tingkat keparahan dalam tiga tingkatan dengan peringatan rinci dan rekomendasi klinis.</p>
+                </div>
+                <div class="feature-card glass-card" id="feature-database">
+                    <div class="feature-icon-wrap">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>Basis Data Herbal</h3>
+                    <p>Basis data komprehensif obat-obatan herbal Indonesia beserta profil farmakologinya.</p>
+                </div>
+                <div class="feature-card glass-card" id="feature-ai">
+                    <div class="feature-icon-wrap">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2a4 4 0 014 4v2a4 4 0 01-8 0V6a4 4 0 014-4z" />
+                                <path d="M16 14H8a4 4 0 00-4 4v2h16v-2a4 4 0 00-4-4z" />
+                                <circle cx="12" cy="6" r="1.5" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>Analitik AI</h3>
+                    <p>Dasbor real-time dengan analitik interaksi, analisis tren, dan laporan yang dapat diekspor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scanner Section -->
+    <section id="scanner" class="section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-badge">Pemindai AI</span>
+                <h2 class="section-title">Pemindai Interaksi Pintar</h2>
+                <p class="section-subtitle">Masukkan obat modern dan obat herbal Indonesia untuk mendeteksi potensi
+                    interaksi menggunakan mesin analisis AI kami.</p>
+            </div>
+            <div class="scanner-container glass-card">
+                <div class="scanner-inputs">
+                    <div class="input-group">
+                        <label for="drug-input">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                class="input-icon">
+                                <rect x="3" y="3" width="18" height="18" rx="2" />
+                                <path d="M12 8v8m-4-4h8" />
+                            </svg>
+                            Obat Modern
+                        </label>
+                        <div class="input-wrapper">
+                            <input type="text" id="drug-input" placeholder="contoh: Warfarin, Aspirin, Metformin..."
+                                autocomplete="off">
+                            <div class="suggestions-dropdown" id="drug-suggestions"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="herbal-input">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                class="input-icon">
+                                <path
+                                    d="M7 20.98c.24-.01.47-.04.7-.08C12.3 20.12 16 16.1 16 11.5V4l-1.22-.61A5.97 5.97 0 0012 3a5.97 5.97 0 00-2.78.39L8 4v7.5C8 16.1 4.3 20.12.3 20.9c.23.04.46.07.7.08" />
+                            </svg>
+                            Herbal / Jamu Indonesia
+                        </label>
+                        <div class="input-wrapper">
+                            <input type="text" id="herbal-input" placeholder="contoh: Kunyit, Jahe, Temulawak..."
+                                autocomplete="off">
+                            <div class="suggestions-dropdown" id="herbal-suggestions"></div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="age-input">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="input-icon">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            Kategori Umur
+                        </label>
+                        <div class="input-wrapper select-wrapper">
+                            <select id="age-input" class="custom-select">
+                                <option value="dewasa">Dewasa (12-65 tahun)</option>
+                                <option value="anak">Anak-anak (< 12 tahun)</option>
+                                <option value="lansia">Lansia (> 65 tahun)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="disease-input">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="input-icon">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                            Penyakit Penyerta
+                        </label>
+                        <div class="input-wrapper select-wrapper">
+                            <select id="disease-input" class="custom-select">
+                                <option value="none">Tidak ada (Sehat)</option>
+                                <option value="hypertension">Hipertensi (Darah Tinggi)</option>
+                                <option value="diabetes">Diabetes (Kencing Manis)</option>
+                                <option value="gastric">Gangguan Lambung / Maag</option>
+                                <option value="kidney">Penyakit Ginjal</option>
+                                <option value="liver">Gangguan Hati / Liver</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button id="analyze-btn" class="btn btn-primary btn-analyze" type="button">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="M21 21l-4.35-4.35" />
+                    </svg>
+                    <span>Analisis Interaksi</span>
+                </button>
+                <div class="scanner-animation" id="scanner-anim">
+                    <div class="scanner-ring ring-1"></div>
+                    <div class="scanner-ring ring-2"></div>
+                    <div class="scanner-ring ring-3"></div>
+                    <div class="scanner-core">
+                        <div class="scanner-dot"></div>
+                    </div>
+                    <p class="scanner-text">AI Menganalisis Interaksi...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="section results-section" style="display:none;">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-badge">Analisis Selesai</span>
+                <h2 class="section-title">Hasil Interaksi</h2>
+            </div>
+            <div class="result-card glass-card" id="result-card">
+                <div class="result-header">
+                    <div class="result-drugs" id="result-drugs">
+                        <span class="result-drug-tag drug-tag" id="result-drug-name"></span>
+                        <span class="result-divider-icon">⚡</span>
+                        <span class="result-drug-tag herbal-tag" id="result-herbal-name"></span>
+                    </div>
+                    <div class="severity-badge" id="severity-badge">
+                        <span class="severity-dot"></span>
+                        <span class="severity-text" id="severity-text"></span>
+                    </div>
+                </div>
+                <div class="result-severity-bar" id="result-severity-bar">
+                    <div class="severity-fill" id="severity-fill"></div>
+                </div>
+                <div class="result-body">
+                    <div class="result-section">
+                        <div class="result-section-header">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                class="result-icon">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                            </svg>
+                            <h4>Ringkasan Interaksi</h4>
+                        </div>
+                        <p id="result-interaction"></p>
+                    </div>
+                    <div class="result-section">
+                        <div class="result-section-header">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                class="result-icon">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 16v-4M12 8h.01" />
+                            </svg>
+                            <h4>Mekanisme</h4>
+                        </div>
+                        <p id="result-mechanism"></p>
+                    </div>
+                    <div class="result-section">
+                        <div class="result-section-header">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                class="result-icon">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                                <polyline points="22,4 12,14.01 9,11.01" />
+                            </svg>
+                            <h4>Rekomendasi</h4>
+                        </div>
+                        <p id="result-recommendation"></p>
+                    </div>
+
+                    <div class="result-section" id="result-profile-section" style="display: none; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                        <div class="result-section-header">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#FFB020" stroke-width="2" class="result-icon">
+                                <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+                                <line x1="12" y1="9" x2="12" y2="13" />
+                                <line x1="12" y1="17" x2="12.01" y2="17" />
+                            </svg>
+                            <h4 style="color: #FFB020;">Peringatan Kondisi Khusus</h4>
+                        </div>
+                        <div class="profile-tags" style="display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                            <span class="profile-tag" id="profile-age-tag">Umur</span>
+                            <span class="profile-tag" id="profile-disease-tag">Penyakit</span>
+                        </div>
+                        <p id="result-side-effects"></p>
+                    </div>
+                </div>
+                <div class="result-actions">
+                    <button class="btn btn-glass" id="save-report-btn" type="button">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z" />
+                            <polyline points="17,21 17,13 7,13 7,21" />
+                            <polyline points="7,3 7,8 15,8" />
+                        </svg>
+                        Simpan Laporan
+                    </button>
+                    <button class="btn btn-primary" id="new-analysis-btn" type="button">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14m-7-7h14" />
+                        </svg>
+                        Analisis Baru
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Database Section -->
+    <section id="database" class="section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-badge">Basis Data Herbal</span>
+                <h2 class="section-title">Basis Data Herbal Indonesia</h2>
+                <p class="section-subtitle">Jelajahi basis data komprehensif kami tentang obat-obatan herbal Indonesia dan interaksinya dengan obat-obatan modern.</p>
+            </div>
+            <div class="database-controls">
+                <div class="search-bar glass-card-sm">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="search-icon">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="M21 21l-4.35-4.35" />
+                    </svg>
+                    <input type="text" id="herbal-search" placeholder="Cari obat herbal...">
+                </div>
+                <div class="filter-tags" id="filter-tags">
+                    <button class="filter-tag active" data-filter="all">Semua</button>
+                    <button class="filter-tag" data-filter="anti-inflammatory">Anti-inflamasi</button>
+                    <button class="filter-tag" data-filter="digestive">Pencernaan</button>
+                    <button class="filter-tag" data-filter="immune">Peningkat Imun</button>
+                    <button class="filter-tag" data-filter="metabolic">Metabolik</button>
+                    <button class="filter-tag" data-filter="antioxidant">Antioksidan</button>
+                </div>
+            </div>
+            <div class="database-grid" id="herbal-grid">
+                <!-- Cards rendered by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="section">
+        <div class="dashboard-layout">
+            <aside class="dashboard-sidebar glass-card" id="dashboard-sidebar">
+                <div class="sidebar-header">
+                    <div class="sidebar-logo">
+                        <div class="sidebar-logo-icon">
+                            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="28"
+                                height="28">
+                                <circle cx="16" cy="16" r="14" stroke="url(#logoGrad)" stroke-width="2" fill="none" />
+                                <path d="M10 16h12M16 10v12" stroke="url(#logoGrad)" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div class="sidebar-brand-text">
+                            <span class="sidebar-brand">PharmaTrace</span>
+                            <span class="sidebar-label">Dasbor AI</span>
+                        </div>
+                    </div>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="javascript:void(0)" class="sidebar-link active" data-tab="overview">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7" rx="1" />
+                            <rect x="14" y="3" width="7" height="7" rx="1" />
+                            <rect x="3" y="14" width="7" height="7" rx="1" />
+                            <rect x="14" y="14" width="7" height="7" rx="1" />
+                        </svg>
+                        <span>Ringkasan</span>
+                    </a>
+                    <a href="javascript:void(0)" class="sidebar-link" data-tab="recent">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12,6 12,12 16,14" />
+                        </svg>
+                        <span>Pindaian Terbaru</span>
+                    </a>
+                    <a href="javascript:void(0)" class="sidebar-link" data-tab="stats">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 20V10M12 20V4M6 20v-6" />
+                        </svg>
+                        <span>Statistik</span>
+                    </a>
+                    <a href="javascript:void(0)" class="sidebar-link" data-tab="settings">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" />
+                        </svg>
+                        <span>Pengaturan</span>
+                    </a>
+                </nav>
+                <div class="sidebar-footer">
+                    <div class="ai-status">
+                        <span class="status-dot"></span>
+                        <span>Mesin AI Aktif</span>
+                    </div>
+                    <span class="version">v2.1.0</span>
+                </div>
+            </aside>
+            <main class="dashboard-main">
+                <div class="dashboard-header">
+                    <div>
+                        <h2 class="dashboard-title">Ringkasan Dasbor</h2>
+                        <p class="dashboard-subtitle">Analitik interaksi farmasi real-time</p>
+                    </div>
+                    <div class="dashboard-actions">
+                        <button class="btn btn-glass btn-sm" id="export-btn" type="button">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                            </svg>
+                            Ekspor
+                        </button>
+                    </div>
+                </div>
+                <div class="dashboard-stats" id="dashboard-stats">
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon stat-icon-scans">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8" />
+                                <path d="M21 21l-4.35-4.35" />
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="stat-scans">0</span>
+                            <span class="stat-label">Total Pindaian</span>
+                        </div>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon stat-icon-herbs">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M7 20.98c.24-.01.47-.04.7-.08C12.3 20.12 16 16.1 16 11.5V4l-1.22-.61A5.97 5.97 0 0012 3a5.97 5.97 0 00-2.78.39L8 4v7.5C8 16.1 4.3 20.12.3 20.9c.23.04.46.07.7.08" />
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="stat-herbs">12</span>
+                            <span class="stat-label">Herbal di DB</span>
+                        </div>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon stat-icon-drugs">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" />
+                                <path d="M12 8v8m-4-4h8" />
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="stat-drugs">8</span>
+                            <span class="stat-label">Entri Obat</span>
+                        </div>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon stat-icon-alerts">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+                                <line x1="12" y1="9" x2="12" y2="13" />
+                                <line x1="12" y1="17" x2="12.01" y2="17" />
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="stat-alerts">0</span>
+                            <span class="stat-label">Peringatan Risiko</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-content">
+                    <div class="dashboard-recent glass-card">
+                        <div class="card-header">
+                            <h3>Analisis Terbaru</h3>
+                            <button class="btn-link" type="button">Lihat Semua</button>
+                        </div>
+                        <div class="recent-scans-list" id="recent-scans"></div>
+                        <div class="empty-state" id="empty-scans">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                class="empty-icon">
+                                <circle cx="11" cy="11" r="8" />
+                                <path d="M21 21l-4.35-4.35" />
+                                <path d="M8 11h6" />
+                            </svg>
+                            <p>Belum ada analisis. Mulai memindai untuk melihat hasil di sini.</p>
+                            <a href="#scanner" class="btn btn-primary btn-sm">Mulai Pindaian Pertama</a>
+                        </div>
+                    </div>
+                    <div class="dashboard-chart glass-card">
+                        <div class="card-header">
+                            <h3>Distribusi Risiko</h3>
+                        </div>
+                        <div class="chart-container" id="chart-container">
+                            <div class="chart-visual">
+                                <div class="chart-ring" id="chart-ring">
+                                    <svg viewBox="0 0 200 200" class="chart-svg">
+                                        <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(139,124,246,0.1)"
+                                            stroke-width="24" />
+                                        <circle cx="100" cy="100" r="80" fill="none" stroke="#4ADE80" stroke-width="24"
+                                            stroke-dasharray="0 502.65" id="chart-arc-safe"
+                                            transform="rotate(-90 100 100)" />
+                                        <circle cx="100" cy="100" r="80" fill="none" stroke="#FBBF24" stroke-width="24"
+                                            stroke-dasharray="0 502.65" id="chart-arc-warning"
+                                            transform="rotate(-90 100 100)" />
+                                        <circle cx="100" cy="100" r="80" fill="none" stroke="#F87171" stroke-width="24"
+                                            stroke-dasharray="0 502.65" id="chart-arc-danger"
+                                            transform="rotate(-90 100 100)" />
+                                    </svg>
+                                    <div class="chart-center">
+                                        <span class="chart-total" id="chart-total">0</span>
+                                        <span class="chart-total-label">Total</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart-legend">
+                                <div class="legend-item">
+                                    <span class="legend-dot legend-safe"></span>
+                                    <span class="legend-label">Aman</span>
+                                    <span class="legend-value" id="legend-safe">0</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-dot legend-warning"></span>
+                                    <span class="legend-label">Peringatan</span>
+                                    <span class="legend-value" id="legend-warning">0</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-dot legend-danger"></span>
+                                    <span class="legend-label">Berbahaya</span>
+                                    <span class="legend-value" id="legend-danger">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                        <circle cx="16" cy="16" r="14" stroke="url(#logoGrad)" stroke-width="2" fill="none" />
+                        <path d="M10 16h12M16 10v12" stroke="url(#logoGrad)" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                    <span class="logo-text">Pharma<span class="logo-accent">Trace</span></span>
+                </div>
+                <p class="footer-desc">Pendeteksi Interaksi Obat & Herbal Berbasis AI untuk keputusan kesehatan yang lebih aman.
+                </p>
+            </div>
+            <div class="footer-nav">
+                <h4>Navigasi</h4>
+                <a href="#home">Beranda</a>
+                <a href="#scanner">Pemindai</a>
+                <a href="#database">Basis Data</a>
+                <a href="#dashboard">Dasbor</a>
+            </div>
+            <div class="footer-nav">
+                <h4>Sumber Daya</h4>
+                <a href="#">Dokumentasi</a>
+                <a href="#">Referensi API</a>
+                <a href="#">Makalah Penelitian</a>
+                <a href="#">Hubungi Kami</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PharmaTrace. Hak cipta dilindungi.</p>
+            <p class="footer-disclaimer">⚠️ Hanya untuk tujuan pendidikan & penelitian. Selalu konsultasikan dengan profesional kesehatan untuk keputusan medis.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
